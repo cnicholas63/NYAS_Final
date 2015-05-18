@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:textColor="@color/nyas_dark_blue"
 
         android:textSize="36dp"
         android:enabled="true"

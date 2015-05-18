@@ -4,8 +4,13 @@
     <color name="nyas_red">#d50028</color>
     <color name="nyas_green">#83b529</color>
     <color name="nyas_blue">#009be7</color>
+    <color name="nyas_dark_blue">#223d6e</color>
 
+    <color name="light_grey">#AAAAAA</color>
+    <color name="mid_grey">#777777</color>
+    <color name="dark_grey">#444444</color>
     <color name="white">#FFFFFF</color>
-    <color name="transparent">#FF000000</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

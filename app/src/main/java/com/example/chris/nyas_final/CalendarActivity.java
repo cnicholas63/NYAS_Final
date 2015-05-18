@@ -1,9 +1,11 @@
 package com.example.chris.nyas_final;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.Toast;
@@ -22,43 +24,32 @@ public class CalendarActivity extends ActionBarActivity {
     }
 
 
+    /**
+     * Helpline button clicked, open the Calendar activity
+     * View view - the view from where the click originated
+     */
+    public void myNyasCalendarHelpLineClicked(View view) {
+        Intent intent = new Intent(this, HelplineActivity.class);
+
+        startActivity(intent);
+    }
+
     public void setupCalendar() {
+        // Point calendar at the calendar view
         calendar = (CalendarView) findViewById(R.id.myNyasCalendarView);
 
-        date = calendar.getDate(); // Get today's date from the calendar
+        // Get today's date from the calendar
+        date = calendar.getDate();
 
-        // sets whether to show the week number.
-        calendar.setShowWeekNumber(false);
-
-        // sets the first day of week according to Calendar.
-        // here we set Monday as the first day of the Calendar
+        // Set Monday as the first day of the calendar week
         calendar.setFirstDayOfWeek(2);
 
-        //The background color for the selected week.
-        calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.nyas_blue));
-
-        //sets the color for the dates of an unfocused month.
-        calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.nyas_red));
-
-        //sets the color for the separator line between weeks.
-        calendar.setWeekSeparatorLineColor(getResources().getColor(R.color.nyas_purple));
-
-        //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
-        calendar.setSelectedDateVerticalBar(R.color.nyas_green);
-
-        //sets the listener to be notified upon selected date change.
+        // Set listener to be called on date change
         calendar.setOnDateChangeListener(new DateChangedListener());
-//        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-//            //show the selected date as a toast
-//            @Override
-//            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-//                Toast.makeText(getApplicationContext(), day + "/" + (month + 1) + "/" + year, Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 
 
-    // private class for date change listener
+    // Callback for CalendarView
     private class DateChangedListener implements CalendarView.OnDateChangeListener {
 
         // The date change listener is called when the user selects a date, but also if they just scroll to a new month - we need to filter this out!

@@ -27,9 +27,6 @@
         <activity
             android:name=".OurServicesActivity"
             android:label="@string/title_activity_our_services" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.chris.nyas_final.MainActivity" />
         </activity>
         <activity
             android:name=".LegalServices"
@@ -37,7 +34,8 @@
         </activity>
         <activity
             android:name=".MyNyasLogIn"
-            android:label="@string/title_activity_my_nyas_log_in" >
+            android:label="@string/title_activity_my_nyas_log_in"
+            android:noHistory="true"> <!-- prevent this activity being returned to when back button is pressed-->
         </activity>
         <activity
             android:name=".MyNyasWelcome"
@@ -46,6 +44,10 @@
         <activity
             android:name=".CalendarActivity"
             android:label="@string/title_activity_calendar" >
+        </activity>
+        <activity
+            android:name=".AppointmentActivity"
+            android:label="@string/title_activity_appointment" >
         </activity>
     </application>
 

@@ -55,15 +55,8 @@ public class MyNyasLogIn extends ActionBarActivity {
             pin = new String(sharedPreferences.getString(nyasPin, "no pin"));
         }
 
+        // Show pin - this is for debugging purposes only and will be removed from the program
         Toast.makeText(this, "Pin = " + pin, Toast.LENGTH_LONG).show();
-
-        //pin = "2001"; // Test value
-
-        // Editing the shared preferences to update pin number - is required
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//        editor.putString(nyasPin, pin); // Write the pin to the preferences
-//        editor.commit(); // Commit the changes to the shared prefs
-
     }
 
     /**

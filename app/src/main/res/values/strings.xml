@@ -60,8 +60,8 @@
 
     <!--My NYAS Calendar activity-->
     <string name="title_activity_my_nyas_calendar">My\nNyas</string>
-    <string name="sub_title_my_nyas_calendar">Calendar and Appointments\n</string>
-    <string name="note_my_nyas_calendar">Here you can make and view appointments and meetings</string>
+    <string name="sub_title_my_nyas_calendar">Appointments</string>
+    <string name="note_my_nyas_calendar">Select a date to create an appointment</string>
 
 
     <!--First Time log-in-->
@@ -99,6 +99,7 @@
     <string name="title_activity_calendar">Calendar</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_appointment">Appointment</string>
 
 
 </resources>
