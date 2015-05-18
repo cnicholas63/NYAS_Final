@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nyas_purple">#76187e</color>
+    <color name="nyas_red">#d50028</color>
+    <color name="nyas_green">#83b529</color>
+    <color name="nyas_blue">#009be7</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

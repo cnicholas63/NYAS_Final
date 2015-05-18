@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.chris.nyas_final.MyNyasLogIn"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/logInMainTitle"
+        android:text="@string/title_activity_my_nyas_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+
+        android:textSize="36dp"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <ImageView
+        android:id="@+id/nyasLogo"
+        android:src="@drawable/nyas_logo_small"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/logInHelpLineButton"
+        android:text = "@string/button_text_helpline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_purple"
+        android:textColor="@color/white"
+
+        android:padding="0dp"
+        android:layout_marginTop="15dp"
+
+        android:onClick="legalServicesHelpLineClicked"
+        android:layout_below="@+id/logInMainTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/logInServicesSubTitle"
+        android:text="@string/sub_title_my_nyas_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_below="@id/logInHelpLineButton"
+        />
+
+    <TextView
+        android:id="@+id/myNyasLoginNote"
+        android:text="@string/note_my_nyas_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:textSize="16dp"
+        android:layout_below="@id/logInServicesSubTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:id="@+id/pinPrompt"
+        android:text="@string/pin_prompt"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myNyasLoginNote"
+        android:layout_marginTop="20dp"
+        android:textSize="28dp"
+
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editTextPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:ems="40"
+
+        android:inputType="phone"
+        android:hint="1234"
+        android:maxLength="4"
+
+        android:layout_below="@+id/pinPrompt"
+        android:layout_alignParentLeft="true"
+ />
+
+    <Button
+        android:id="@+id/adviceServicesRedButton"
+        android:text="@string/button_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+        android:background="@color/nyas_red"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+        android:onClick="myNyasGoButtonClicked"
+        />
+
+</RelativeLayout>

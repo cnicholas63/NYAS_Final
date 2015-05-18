@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Welcome to the NYAS</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Pin code string identifier for MY NYAS-->
+    <string name="nyas_preferences">nyas_preferences</string>
+    <string name="nyas_pin">PIN</string>
+
+    <!--NYAS phone number-->
+    <string name="nyas_phone_number">tel:08088081001</string>
+    <!--NYAS email address-->
+    <string name="nyas_email_address">help@nyas.net</string>
+
+
+    <string name="empty"></string>
+    <string name="empty2line">\n\n</string>
+    <string name="button_text_empty"></string>
+
+    <string name="pin_prompt">Enter your 4 digit PIN:</string>
+
+    <string name="button_text_helpline">Helpline</string>
+    <string name="button_text_advice">Advice</string>
+    <string name="button_text_our_services">Our\nServices</string>
+    <string name="button_text_my_nyas">My\nNYAS</string>
+    <string name="button_go">GO</string>
+
+    <string name="title_activity_contact_us">Helpline</string>
+    <string name="title_contact_us">Helpline\n</string>
+    <string name="note_contact_us">"*Please note with the call now option, that some mobile networks may charge the same as a landline charge to connect to 0808 numbers"</string>
+    <string name="button_text_call_now">Call now*</string>
+    <string name="button_text_chat">Chat</string>
+    <string name="button_text_email">Email</string>
+    <string name="button_text_callback">Request\na\ncall back</string>
+
+    <string name="title_activity_advice_services">Advice Services</string>
+    <string name="title_advice_services">Advice\nServices</string>
+    <string name="sub_title_advice_services">Please select a service from below\nor select Helpline to contact us directly.\n</string>
+    <string name="note_advice_services">NYAS can advise you on your rights and responsibilities and offer legal services.</string>
+    <string name="button_text_rights">My Rights,\nResponsibilities\n&amp;\nEntitlement</string>
+    <string name="button_text_legal_services">Legal Services</string>
+    <string name="title_activity_our_services">Our Services</string>
+
+    <string name="title_activity_legal_services">Legal Services</string>
+    <string name="title_legal_services">Legal\nServices</string>
+    <string name="sub_title_legal_services">The following outlines our legal service provision</string>
+
+    <string name="title_our_services">Our\nServices</string>
+
+    <!--Log in screen-->
+    <string name="title_activity_my_nyas_log_in">My\nNyas</string>
+    <string name="sub_title_my_nyas_log_in">Please log in to access My NYAS</string>
+    <string name="note_my_nyas_log_in">Enter your PIN number below. It this is your first visit to My NYAS, enter "0000", then you can set your own pin</string>
+    <string name="button_text_login">Log In</string>
+
+
+    <!--Service Description Titles and Strings, used in expandableListView-->
+    <string-array name="service_description_titles">
+        <item>Advocacy</item>
+        <item>Issue Based Advocacy</item>
+        <item>Residential Visiting Advocacy</item>
+        <item>Mental Health Advocacy</item>
+        <item>Rights Based</item>
+        <item>Advocacy for Carers</item>
+        <item>Independent Visitors</item>
+        <item>Independent Persons</item>
+        <item>Our Workers</item>
+    </string-array>
+
+    <string-array name="service_descriptions">
+        <item>NYAS has a strong history in the provision of advocacy. We played a key role in the delivery of the National Advocacy Standards 2002 and initiated advocacy for young people with the Youth Justice Board for young people secure settings. We are an accredited training centre with both the open College Network and City and Guilds to provide specialist qualifications for advocating for children and adults. Amongst our specialisms are advocacy for children and adults with disabilities and mental health advocacy including IMHA’s (Independent Mental Health Advocates)</item>
+        <item>Our skilled and qualified advocates help children, young people and vulnerable adults with the difficulties they face to resolve the issues concerning them. This is one to one work by someone who is independent of other professionals. NYAS advocates will ensure that the child’s, the young person’s or the vulnerable adult’s voice is heard and listened to, particularly in decisions which are made about them.</item>
+        <item>NYAS advocates will visit children’s homes (including secure homes) and inpatient settings on a regular basis to provide a rights based service and will act upon issues the children or young people may face both an a group and an individual basis.</item>
+        <item>This is one of our specialist areas. We have a growing number of advocacy services within inpatient settings including forensic settings. This is often a combination of issue based advocacy, residential visiting advocacy and IMHA’s (Independent Mental Health Advocate) for those patients who are detained in hospital</item>
+        <item>Where children young people or vulnerable adults are disabled we may adopt a ‘rights based’ approach to advocacy which ensures that their basic rights are protected and their dignity upheld. We have significant expertise in advocating for disabled children and adults. We are committed to the social model of disability.</item>
+        <item>We know that caring for an adult or a disabled child is often very isolating and challenging. We provide advocacy for carers to help them access services to which they are entitled.</item>
+        <item>NYAS provides volunteers Independent Visitors for children in care across England and Wales, helping them to benefit from a positive role model.</item>
+        <item>We are able to provide Independent Persons for the purposes of secure reviews and for the purposes of local authority complaints. We can also provide Investigating Officers for complaints\nRegulation 44 (formerly Reg 33) Visitors\nWe provide Regulation 44 visitors for children’s homes.</item>
+        <item>All of our services are carried out by workers and volunteers who have been safely recruited and successfully completed our accredited training. Our work is underpinned by up to date legal knowledge and support from our Legal Services.\nIf you are an individual and want to know how we can help you can email us using the app or at help@nyas.net or call us using the app or on 0808 808 1001.</item>
+    </string-array>
+
+
+    <string name="hello_world">Hello world!</string>
+
+
+</resources>

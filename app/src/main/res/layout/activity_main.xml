@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    tools:context=".MainActivity"
+    android:background="@color/white" >
+
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyasLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:src="@drawable/nyas_logo_large"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/helpLineButton"
+        android:text = "@string/button_text_helpline"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_purple"
+        android:textColor="@color/white"
+
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_below="@id/nyasLogo"
+        android:layout_alignParentLeft="true"
+
+        android:onClick="helpLineClicked"
+        />
+
+    <Button
+        android:id="@+id/adviceButton"
+        android:text="@string/button_text_advice"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_green"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/nyasLogo"
+
+        android:onClick="adviceClicked"
+        />
+
+    <Button
+        android:id="@+id/servicesButton"
+        android:text="@string/button_text_our_services"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_blue"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/helpLineButton"
+
+        android:onClick="ourServicesClicked"
+        />
+
+    <Button
+        android:id="@+id/myNyasButton"
+        android:text="@string/button_text_my_nyas"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+        android:background="@color/nyas_red"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+
+        android:layout_below="@id/adviceButton"
+        android:layout_alignParentRight="true"
+
+        android:onClick="myNyasServicesClicked"
+        />
+
+</RelativeLayout>

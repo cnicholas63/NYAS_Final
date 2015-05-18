@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/white"
+    tools:context="com.example.chris.nyas_final.OurServicesActivity">
+
+    <TextView
+        android:id="@+id/ourServicesMainTitle"
+        android:text="@string/title_our_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="36dp"
+    />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyasLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/nyas_logo_small"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/ourServicesHelpLineButton"
+        android:text = "@string/button_text_helpline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_purple"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp"
+
+        android:layout_below="@id/ourServicesMainTitle"
+        android:layout_alignParentLeft="true"
+
+        android:onClick="helpLineClicked"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subTitle"
+        android:layout_alignParentLeft="true"
+        android:text="Select the options below to learn more about our services:"
+        android:layout_below="@id/ourServicesHelpLineButton"
+
+        android:elegantTextHeight="false"
+        android:textSize="18dp"
+        android:layout_marginBottom="5dp"/>
+
+    <ExpandableListView
+        android:id="@+id/ourServicesExpandableListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
