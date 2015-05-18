@@ -1,12 +1,149 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/white"
     tools:context="com.example.chris.nyas_final.AppointmentActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/myNyasAppointmentMainTitle"
+        android:text="@string/title_activity_my_nyas_appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/nyas_dark_blue"
+        android:textSize="36dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyasLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/nyas_logo_small"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/appointmentHelpLineButton"
+        android:text = "@string/button_text_helpline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_purple"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp"
+
+        android:layout_below="@id/myNyasAppointmentMainTitle"
+        android:layout_alignParentLeft="true"
+
+        android:onClick="myNyasAppointmentHelpLineClicked"
+        />
+
+    <TextView
+        android:id="@+id/myNyasAppointmentSubTitle"
+        android:text="@string/subtitle_my_nyas_appointment"
+        android:layout_below="@id/appointmentHelpLineButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/appointment_start_button"
+        android:text="@string/button_text_start"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/nyas_blue"
+        android:textColor="@color/white"
+
+        android:layout_below="@id/myNyasAppointmentSubTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:onClick="myNyasAppointmentStartClicked"
+
+         />
+
+    <Button
+        android:id="@+id/appointment_end_button"
+        android:text="@string/button_text_end"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/nyas_dark_blue"
+        android:textColor="@color/white"
+
+        android:layout_below="@id/myNyasAppointmentSubTitle"
+        android:layout_alignParentRight="true"
+
+        android:onClick="myNyasAppointmentEndClicked"
+        />
+
+    <EditText
+        android:id="@+id/appointment_notes_text"
+        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="Enter appointment notes here..."
+        android:background="@color/manila"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appointment_start_button"
+        android:layout_above="@+id/appointment_save_button"
+        android:layout_alignRight="@+id/appointment_end_button"
+        android:layout_alignEnd="@+id/appointment_end_button"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:editable="false"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/appointment_save_button"
+        android:text="@string/button_text_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/nyas_green"
+        android:textColor="@color/white"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:onClick="myNyasAppointmentSaveClicked"
+        />
+
+    <Button
+        android:id="@+id/appointment_cancel_button"
+        android:text="@string/button_text_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/nyas_red"
+        android:textColor="@color/white"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+        android:onClick="myNyasAppointmentCancelClicked"
+        />
+
+
 
 </RelativeLayout>

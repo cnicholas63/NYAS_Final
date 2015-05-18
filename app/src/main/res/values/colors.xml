@@ -11,6 +11,7 @@
     <color name="dark_grey">#444444</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="manila">#F8F5E1</color>
     <color name="transparent">#00000000</color>
 
 </resources>

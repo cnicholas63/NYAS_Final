@@ -13,9 +13,10 @@
     <string name="nyas_email_address">help@nyas.net</string>
 
 
+    <!--suppress CheckTagEmptyBody -->
     <string name="empty"></string>
     <string name="empty2line">\n\n</string>
-    <string name="button_text_empty"></string>
+    <string name="button_text_empty"/>
 
     <string name="pin_prompt">Enter your 4 digit PIN:</string>
 
@@ -26,21 +27,30 @@
     <string name="button_text_calendar">Calendar</string>
     <string name="button_text_diary">Diary</string>
     <string name="button_text_go">GO</string>
-
-    <string name="title_activity_contact_us">Helpline</string>
-    <string name="title_contact_us">Helpline\n</string>
-    <string name="note_contact_us">"*Please note with the call now option, that some mobile networks may charge the same as a landline charge to connect to 0808 numbers"</string>
     <string name="button_text_call_now">Call now*</string>
     <string name="button_text_chat">Chat</string>
     <string name="button_text_email">Email</string>
     <string name="button_text_callback">Request\na\ncall back</string>
+    <string name="button_text_rights">My Rights,\nResponsibilities\n&amp;\nEntitlement</string>
+    <string name="button_text_legal_services">Legal Services</string>
+    <string name="button_text_login">Log In</string>
+
+    <!--Appointment buttons-->
+    <string name="button_text_start">Start</string>
+    <string name="button_text_end">End</string>
+    <string name="button_text_save">Save</string>
+    <string name="button_text_cancel">Cancel</string>
+
+    <string name="title_activity_contact_us">Helpline</string>
+    <string name="title_contact_us">Helpline\n</string>
+    <string name="note_contact_us">"*Please note with the call now option, that some mobile networks may charge the same as a landline charge to connect to 0808 numbers"</string>
+
 
     <string name="title_activity_advice_services">Advice Services</string>
     <string name="title_advice_services">Advice\nServices</string>
     <string name="sub_title_advice_services">Please select a service from below\nor select Helpline to contact us directly.\n</string>
     <string name="note_advice_services">NYAS can advise you on your rights and responsibilities and offer legal services.</string>
-    <string name="button_text_rights">My Rights,\nResponsibilities\n&amp;\nEntitlement</string>
-    <string name="button_text_legal_services">Legal Services</string>
+
     <string name="title_activity_our_services">Our Services</string>
 
     <string name="title_activity_legal_services">Legal Services</string>
@@ -51,18 +61,23 @@
 
     <!--Log in screen-->
     <string name="title_activity_my_nyas_log_in">My\nNyas</string>
-    <string name="button_text_login">Log In</string>
 
     <!--My NYAS Welcome activity-->
     <string name="title_activity_my_nyas_welcome">My\nNyas</string>
-    <string name="sub_title_my_nyas_welcome">Welcome to your My NYAS\n</string>
+    <string name="sub_title_my_nyas_welcome">Welcome to your My NYAS page\n</string>
     <string name="note_my_nyas_welcome">Here you can make and view appointments and meetings. Use the diary to record your feelings, thoughts and wishes.</string>
 
     <!--My NYAS Calendar activity-->
+    <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_my_nyas_calendar">My\nNyas</string>
     <string name="sub_title_my_nyas_calendar">Appointments</string>
     <string name="note_my_nyas_calendar">Select a date to create an appointment</string>
 
+    <!--My NYAS Appointment activity-->
+    <string name="title_activity_appointment">Appointment</string>
+    <string name="title_activity_my_nyas_appointment">My\nNYAS</string>
+    <string name="subtitle_my_nyas_appointment">Appointment</string>
+    <string name="subtitle2_my_nyas_appointment">Notes</string>
 
     <!--First Time log-in-->
     <string name="sub_title_my_nyas_first_log_in">Before accessing My NYAS, please create a pin number. This will help protect your privacy in the app.</string>
@@ -96,10 +111,10 @@
         <item>We are able to provide Independent Persons for the purposes of secure reviews and for the purposes of local authority complaints. We can also provide Investigating Officers for complaints\nRegulation 44 (formerly Reg 33) Visitors\nWe provide Regulation 44 visitors for children’s homes.</item>
         <item>All of our services are carried out by workers and volunteers who have been safely recruited and successfully completed our accredited training. Our work is underpinned by up to date legal knowledge and support from our Legal Services.\nIf you are an individual and want to know how we can help you can email us using the app or at help@nyas.net or call us using the app or on 0808 808 1001.</item>
     </string-array>
-    <string name="title_activity_calendar">Calendar</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_appointment">Appointment</string>
+
+
+
 
 
 </resources>

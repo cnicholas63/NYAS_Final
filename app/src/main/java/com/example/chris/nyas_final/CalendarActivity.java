@@ -1,5 +1,6 @@
 package com.example.chris.nyas_final;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -14,18 +15,21 @@ import android.widget.Toast;
 public class CalendarActivity extends ActionBarActivity {
     CalendarView calendar;
     Long date; // Used to help identify when a date is selected by the user and not as a result of scrolling te calendar
+    Context context; // required for call to inner class DateChangedListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        context=this; // Get this context
+
         setupCalendar();
     }
 
 
     /**
-     * Helpline button clicked, open the Calendar activity
+     * Helpline button clicked, open the Helpline activity
      * View view - the view from where the click originated
      */
     public void myNyasCalendarHelpLineClicked(View view) {
@@ -48,18 +52,26 @@ public class CalendarActivity extends ActionBarActivity {
         calendar.setOnDateChangeListener(new DateChangedListener());
     }
 
-
     // Callback for CalendarView
     private class DateChangedListener implements CalendarView.OnDateChangeListener {
+        Intent intent = new Intent(context, AppointmentActivity.class); // appointmentActivity
 
         // The date change listener is called when the user selects a date, but also if they just scroll to a new month - we need to filter this out!
         public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
 
             if(calendar.getDate() == date) { // Filters out the data change call originating from scrolling through calendar
-                return;
+                return; // No change to date return
             }
-            date = calendar.getDate();
-            Toast.makeText(getApplicationContext(), day + "/" + (month + 1) + "/" + year, Toast.LENGTH_SHORT).show();
+
+            date = calendar.getDate(); // Get the date clicked then call the appointment activity
+            // Add the date information to extras before starting the intent
+            intent.putExtra("YEAR", year); // Add the values to extras so they can be accessed by the appointmentActivity
+            intent.putExtra("MONTH", month + 1); // The month value is 0 based so add 1
+            intent.putExtra("DAY", day);
+
+            startActivity(intent); // start the appointmentActivity
+
+            // Toast.makeText(getApplicationContext(), day + "/" + (month + 1) + "/" + year, Toast.LENGTH_SHORT).show();
         }
     }
 
