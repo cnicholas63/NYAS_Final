@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    tools:context="com.example.chris.nyas_final.CalendarActivity">
+
+    <TextView
+        android:id="@+id/myNyasCalendarMainTitle"
+        android:text="@string/title_activity_my_nyas_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="36dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyasLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/nyas_logo_small"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/myNyasCalendarSubTitle"
+        android:text="@string/sub_title_my_nyas_calendar"
+        android:layout_below="@id/myNyasCalendarMainTitle"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+
+        android:textSize="18dp" />
+
+    <CalendarView
+        android:id="@+id/myNyasCalendarView"
+        android:layout_below="@id/myNyasCalendarSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    tools:context="com.example.chris.nyas_final.MyNyasWelcome"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/myNyasWelcomMainTitle"
+        android:text="@string/title_activity_my_nyas_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="36dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nyasLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/nyas_logo_small"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/myNyasSubTitle"
+        android:text="@string/sub_title_my_nyas_welcome"
+        android:layout_below="@id/myNyasWelcomMainTitle"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/myNyasNote"
+        android:text="@string/note_my_nyas_welcome"
+        android:layout_below="@id/myNyasSubTitle"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/callNowButton"
+        android:text="@string/button_text_helpline"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+        android:layout_alignParentLeft="true"
+
+        android:background="@color/nyas_purple"
+        android:textColor="@color/white"
+
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_below="@id/myNyasNote"
+
+        android:onClick="myNyasWelcomeHelpLineClicked"
+        />
+
+    <Button
+        android:id="@+id/chatButton"
+        android:text="@string/button_text_calendar"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_green"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/myNyasNote"
+
+        android:onClick="myNyasWelcomeCalendarClicked"
+        />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:text="@string/button_text_empty"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+
+        android:background="@color/nyas_blue"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/callNowButton"
+        />
+
+    <Button
+        android:id="@+id/requestCallbackButton"
+        android:text="@string/button_text_diary"
+        android:layout_width="@dimen/normal_button_width"
+        android:layout_height="@dimen/normal_button_height"
+        android:textSize="@dimen/button_text_size"
+        android:textAllCaps="false"
+        android:background="@color/nyas_red"
+        android:textColor="@color/white"
+
+        android:layout_marginTop="5dp"
+
+        android:layout_below="@id/chatButton"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

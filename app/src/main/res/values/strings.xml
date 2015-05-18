@@ -23,7 +23,9 @@
     <string name="button_text_advice">Advice</string>
     <string name="button_text_our_services">Our\nServices</string>
     <string name="button_text_my_nyas">My\nNYAS</string>
-    <string name="button_go">GO</string>
+    <string name="button_text_calendar">Calendar</string>
+    <string name="button_text_diary">Diary</string>
+    <string name="button_text_go">GO</string>
 
     <string name="title_activity_contact_us">Helpline</string>
     <string name="title_contact_us">Helpline\n</string>
@@ -49,10 +51,26 @@
 
     <!--Log in screen-->
     <string name="title_activity_my_nyas_log_in">My\nNyas</string>
-    <string name="sub_title_my_nyas_log_in">Please log in to access My NYAS</string>
-    <string name="note_my_nyas_log_in">Enter your PIN number below. It this is your first visit to My NYAS, enter "0000", then you can set your own pin</string>
     <string name="button_text_login">Log In</string>
 
+    <!--My NYAS Welcome activity-->
+    <string name="title_activity_my_nyas_welcome">My\nNyas</string>
+    <string name="sub_title_my_nyas_welcome">Welcome to your My NYAS\n</string>
+    <string name="note_my_nyas_welcome">Here you can make and view appointments and meetings. Use the diary to record your feelings, thoughts and wishes.</string>
+
+    <!--My NYAS Calendar activity-->
+    <string name="title_activity_my_nyas_calendar">My\nNyas</string>
+    <string name="sub_title_my_nyas_calendar">Calendar and Appointments\n</string>
+    <string name="note_my_nyas_calendar">Here you can make and view appointments and meetings</string>
+
+
+    <!--First Time log-in-->
+    <string name="sub_title_my_nyas_first_log_in">Before accessing My NYAS, please create a pin number. This will help protect your privacy in the app.</string>
+    <string name="note_my_nyas_first_log_in">Please enter a 4 digit pin number below, this will then be used as your secret pin in future. Be careful not to forget your new pin.</string>
+
+    <!--Normal login-->
+    <string name="sub_title_my_nyas_log_in">Welcome back!</string>
+    <string name="note_my_nyas_log_in">To access your personal My NYAS area, please log in using your pin number, then click GO to proceed.</string>
 
     <!--Service Description Titles and Strings, used in expandableListView-->
     <string-array name="service_description_titles">
@@ -78,7 +96,7 @@
         <item>We are able to provide Independent Persons for the purposes of secure reviews and for the purposes of local authority complaints. We can also provide Investigating Officers for complaints\nRegulation 44 (formerly Reg 33) Visitors\nWe provide Regulation 44 visitors for children’s homes.</item>
         <item>All of our services are carried out by workers and volunteers who have been safely recruited and successfully completed our accredited training. Our work is underpinned by up to date legal knowledge and support from our Legal Services.\nIf you are an individual and want to know how we can help you can email us using the app or at help@nyas.net or call us using the app or on 0808 808 1001.</item>
     </string-array>
-
+    <string name="title_activity_calendar">Calendar</string>
 
     <string name="hello_world">Hello world!</string>
 

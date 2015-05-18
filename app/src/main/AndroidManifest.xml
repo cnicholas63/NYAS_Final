@@ -39,6 +39,14 @@
             android:name=".MyNyasLogIn"
             android:label="@string/title_activity_my_nyas_log_in" >
         </activity>
+        <activity
+            android:name=".MyNyasWelcome"
+            android:label="@string/title_activity_my_nyas_welcome" >
+        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar" >
+        </activity>
     </application>
 
 </manifest>
