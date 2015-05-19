@@ -60,18 +60,26 @@ public class AccessDatabase implements AppConstants {
 
         cursor.moveToFirst(); // Make sure cursor is at beginning of results
 
+
         Appointment appointment = cursorToAppointment(cursor);
+
+        appointment.printAppointment();
         cursor.close();
         return appointment;
     }
 
     // Delete a record from the database based on its ID
-    public void deleteComment(Appointment appointment) {
+    public void deleteAppointment(Appointment appointment) {
         long id = appointment.getId();
+
+        if(id == 0) { // This appointment was not retrieved from the database, do not try to delete it
+            System.out.println("Invalid Appointment ID, record not deleted");
+            return;
+        }
+
         System.out.println("Comment deleted with id: " + id);
         database.delete(TABLE_ENTRIES, COLUMN_ID + " = " + id, null);
     }
-
 
     // Query the database for all appointments
     public List<Appointment> getAllAppointments() {

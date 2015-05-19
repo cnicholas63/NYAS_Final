@@ -12,13 +12,12 @@ import android.util.Log;
  */
 public class DatabaseHelper extends SQLiteOpenHelper implements AppConstants {
 
-
-    private static final String DATABASE_CREATE = // The SQLite string that used to create
-        "create table " + DATABASE_NAME + TABLE_ENTRIES + " (" +
+    private static final String DATABASE_CREATE = // The SQLite string used to create the table
+        "create table " + TABLE_ENTRIES + " (" +
             COLUMN_ID + " integer primary key autoincrement, " +
             COLUMN_TYPE + " integer, " + COLUMN_DATE + " text, " +
             COLUMN_START_TIME + " text, " + COLUMN_END_TIME + " text, " +
-            COLUMN_TITLE + " text, " + COLUMN_CONTENT + "text);";
+            COLUMN_TITLE + " text, " + COLUMN_CONTENT + " text);";
 
     // Constructor for the class
     public DatabaseHelper(Context context) {

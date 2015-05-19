@@ -6,17 +6,35 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
+    AccessDatabase appointmentsDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        appointmentsDatabase = new AccessDatabase(this);
+        appointmentsDatabase.open();
+
+        List<Appointment> values = appointmentsDatabase.getAllAppointments();
+
+        // use the SimpleCursorAdapter to show the
+        // elements in a ListView
+        for(Appointment app : values) {
+            app.printAppointment();
+
+        }
+
+
+        appointmentsDatabase.close();
     }
 
     @Override

@@ -34,7 +34,7 @@ public class DateClass {
         temp = date.substring(index - 2, index);
         month = Integer.parseInt(temp);
         index-=2;
-        temp = date.substring(1, index);
+        temp = date.substring(0, index);
         year = Integer.parseInt(temp);
     }
 

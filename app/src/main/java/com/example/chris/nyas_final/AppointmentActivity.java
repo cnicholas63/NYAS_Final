@@ -3,18 +3,20 @@ package com.example.chris.nyas_final;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.database.SQLException;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-
-public class AppointmentActivity extends ActionBarActivity {
+// Appointment activity manages
+public class AppointmentActivity extends ActionBarActivity implements AppConstants {
     int year, month, day;
     int hour, minute;
     int startHour = 0;   // Start of appointment hour
@@ -48,18 +50,21 @@ public class AppointmentActivity extends ActionBarActivity {
 
     @Override
     protected Dialog onCreateDialog(int id) {
-        if(id == DIALOG_ID)
+
+        if(id == DIALOG_ID) // show dialog 12 hour format
             return new TimePickerDialog(this, timePickerListener, hour, minute, false);
 
         return null;
     }
 
+    // Listener for time picker onTimeSet, interrogates the dialog for hour and minutes
     protected TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minuteOfHour) {
             hour = hourOfDay;
             minute = minuteOfHour;
 
+            // Set the time of the appointment
             setAppointmentTime(hour, minute);
         }
     };
@@ -95,7 +100,6 @@ public class AppointmentActivity extends ActionBarActivity {
         Toast.makeText(AppointmentActivity.this, "In setAppointmentTime:" + hour + " : " + minute, Toast.LENGTH_SHORT).show();
     }
 
-
     /**
      * Start button clicked, open the start time picker
      * View view - the view from where the click originated
@@ -130,8 +134,50 @@ public class AppointmentActivity extends ActionBarActivity {
      */
     public void myNyasAppointmentSaveClicked(View view) {
         Intent intent = new Intent(this, HelplineActivity.class);
+        EditText title = (EditText) findViewById(R.id.appointment_title_text); // used for validation and populating Appointment object
+        EditText description = (EditText) findViewById(R.id.appointment_notes_text); // used for populating Appointment object
 
-        //startActivity(intent);
+        // Validate start and end times
+        if(endHour <= startHour & endMinute < startMinute) { // End time is set before start time
+            Toast.makeText(AppointmentActivity.this, "Please ensure appointment end time is not before start time", Toast.LENGTH_LONG).show();
+            return; // return to activity
+        }
+
+        // Validate that the title field has been populated
+        if(title.getText().length() == 0) {
+            Toast.makeText(AppointmentActivity.this, "Please enter an appointment title.\nAppointment notes can be left empty", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // Format the appointment data before populating Appointment
+        String appointmentDate = String.format("%02d%02d%02d", year, month, day);
+
+        // Format time string to ensure it has 2 digits each for hours and minutes
+        String startTime = String.format("%02d%02d", startHour, startMinute); // Start time
+        String endTime = String.format("%02d%02d", endHour, endMinute); // End time
+
+        String appointmentTitle = title.getText().toString(); // Get the appointment title
+        String appointmentNotes = description.getText().toString(); // Get the appointment notes
+
+        // Appointment validates, write it to the database
+        Appointment appointment = new Appointment(TYPE_APPOINTMENT, appointmentDate, startTime, endTime, appointmentTitle, appointmentNotes);
+
+        // Open the database and write the appointment to it
+        AccessDatabase db = new AccessDatabase(this); // Instantiate database object
+
+        // Try catch block incase db.open fails
+        try {
+            db.open(); // Open the database
+        } catch(SQLException e) { // Exception caught display error message
+            Toast.makeText(AppointmentActivity.this, "Database failed, appointment not saved", Toast.LENGTH_LONG).show();
+            System.out.println("Database failed to open in Appointment Activity error = " + e.getMessage());
+            return;
+        }
+
+        db.createAppointment(appointment); // Write appointment to database
+
+        db.close();
+
         Toast.makeText(this, "Save Button Clicked", Toast.LENGTH_SHORT).show();
     }
 
@@ -145,7 +191,6 @@ public class AppointmentActivity extends ActionBarActivity {
         //startActivity(intent);
         Toast.makeText(this, "Cancel Button Clicked", Toast.LENGTH_SHORT).show();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
