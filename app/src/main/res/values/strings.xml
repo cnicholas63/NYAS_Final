@@ -76,7 +76,7 @@
     <!--My NYAS Appointment activity-->
     <string name="title_activity_appointment">Appointment</string>
     <string name="title_activity_my_nyas_appointment">My\nNYAS</string>
-    <string name="subtitle_my_nyas_appointment">Appointment</string>
+    <string name="subtitle_my_nyas_appointment">Appointment:</string>
     <string name="subtitle2_my_nyas_appointment">Notes</string>
 
     <!--First Time log-in-->
@@ -111,10 +111,5 @@
         <item>We are able to provide Independent Persons for the purposes of secure reviews and for the purposes of local authority complaints. We can also provide Investigating Officers for complaints\nRegulation 44 (formerly Reg 33) Visitors\nWe provide Regulation 44 visitors for children’s homes.</item>
         <item>All of our services are carried out by workers and volunteers who have been safely recruited and successfully completed our accredited training. Our work is underpinned by up to date legal knowledge and support from our Legal Services.\nIf you are an individual and want to know how we can help you can email us using the app or at help@nyas.net or call us using the app or on 0808 808 1001.</item>
     </string-array>
-
-
-
-
-
 
 </resources>

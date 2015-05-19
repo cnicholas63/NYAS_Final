@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -30,13 +31,18 @@ public class AppointmentActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
 
+        String formattedString;
+
         // Get the selected date from intent Extras
         Intent intent = getIntent();            // Get calling intent
         year = intent.getIntExtra("YEAR", 0);   // Get the Year from Extras - or set to 0 if not found
         month = intent.getIntExtra("MONTH", 0); // Get the Month value
         day = intent.getIntExtra("DAY", 0);     // Get the Day value
 
-        Toast.makeText(this, day + "/" + month + "/" + year, Toast.LENGTH_SHORT).show();
+        // format time string to ensure it has 2 digits each for hours and minutes
+        formattedString = String.format("%02d/%02d/%02d", day, month, year);
+        TextView appointmentDate = (TextView) findViewById(R.id.myNyasAppointmentDate);
+        appointmentDate.setText(formattedString); // Append the date of the appointment to the s
 
     }
 
@@ -118,10 +124,8 @@ public class AppointmentActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-
-
     /**
-     * Save button clicked, save the appointment
+     * Save button clicked, check appointment is valid save the appointment
      * View view - the view from where the click originated
      */
     public void myNyasAppointmentSaveClicked(View view) {

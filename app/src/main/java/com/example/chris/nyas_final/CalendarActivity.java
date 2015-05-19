@@ -1,5 +1,6 @@
 package com.example.chris.nyas_final;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +11,9 @@ import android.view.View;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 
 public class CalendarActivity extends ActionBarActivity {
@@ -63,15 +67,23 @@ public class CalendarActivity extends ActionBarActivity {
                 return; // No change to date return
             }
 
-            date = calendar.getDate(); // Get the date clicked then call the appointment activity
+            // We need to check if the specified date is before today to prevent retrospective appointments
+            Calendar today = Calendar.getInstance(); // Get a Calendar instance for today
+            Calendar appointment = Calendar.getInstance(); // Get a calendar instance for the appointment
+            appointment.set(year, month, day); // Set the appointment date so that the two dates can be compared
+
+            if(today.after(appointment)) { // Show error and ignore date chosen
+                Toast.makeText(getApplicationContext(), "Invalid Date!\nNew appointments must be on or after today", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            // Valid date chosen, go to appointment information activity
             // Add the date information to extras before starting the intent
             intent.putExtra("YEAR", year); // Add the values to extras so they can be accessed by the appointmentActivity
             intent.putExtra("MONTH", month + 1); // The month value is 0 based so add 1
             intent.putExtra("DAY", day);
 
             startActivity(intent); // start the appointmentActivity
-
-            // Toast.makeText(getApplicationContext(), day + "/" + (month + 1) + "/" + year, Toast.LENGTH_SHORT).show();
         }
     }
 
