@@ -10,6 +10,9 @@ A Prototype Android app for _NYAS_ that provides a range of features including:
   * Appointments
 __Diary and appointment entries persisted in SQL database.__
 
+## Storyboard
+![alt text]
+
 Developed using Android Studio.
 
 NYAS: https://www.nyas.net/
