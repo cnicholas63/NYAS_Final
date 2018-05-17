@@ -1,4 +1,4 @@
-# NYAS_Final
+# NYAS App
 ## Module: Inspiring Creativity
 
 A Prototype Android app for _NYAS_ that provides a range of features including:
