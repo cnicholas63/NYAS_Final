@@ -1,16 +1,19 @@
-# NYAS_Final
-Module: Inspiring Creativity
-NYAS Project
+# NYAS App
+## Module: Inspiring Creativity
 
-Prototype for https://www.nyas.net/
+A Prototype Android app for _NYAS_ that provides a range of activities including:
+* Learn about NYAS the organisation
+* Contact representitives for support
+* Visit official web page
+* Password protected areas for:
+  * Diary entries
+  * Appointments
+  
+__Diary and appointment entries persisted in SQL database.__
 
-A prototype Android application developed in Android Studio
+## Storyboard
+![alt text](https://github.com/cnicholas63/NYAS_Final/blob/master/Storyboard.png "Storyboard")
 
-Prototype app that provides facilities for vulnerable people to 
-Learn about NYAS
-Contact
-Keep diary simple entries behind passworded activity.
-Diary entries persisted in SQL database
-Visit web page
+Developed using Android Studio.
 
-Project designed to demonstrate use of a range of android activity types.
+NYAS: https://www.nyas.net/
